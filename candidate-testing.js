@@ -25,7 +25,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
   for (i = 0; i < questions.length; i++){
-  candidateAnswers.push(input.question(`${questions[i]}:`))
+  candidateAnswers.push(input.question(`${questions[i]}: `))
 
 }
 };
@@ -47,9 +47,9 @@ function gradeQuiz(candidateAnswers) {
   }
   let grade = ((correct.length / questions.length) * 100);
   if (correct.length >= 4){
-  console.log(`>>> Overall Grade: ${grade}% <<<\n>>> STATUS: PASSED <<<`)
+  console.log(`>>> Overall Grade: ${grade}% (${correct.length} of 5 responses correct) <<<\n>>> STATUS: PASSED <<<`)
   } else {
-    console.log(`>>> Overall Grade: ${grade}% <<<\n>>> STATUS: FAILED <<<`)
+    console.log(`>>> Overall Grade: ${grade}% (${correct.length} of 5 responses correct) <<<\n>>> STATUS: FAILED <<<`)
   }
   return grade;
 }
